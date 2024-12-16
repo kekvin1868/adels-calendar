@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
+import 'core/utils/pref_utils.dart';
+
+var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  Future.wait([
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp
+    ]),
+    PrefUtils().init()
+  ]).then((value) {
+    runApp(Froovy());
+  });
+  runApp(const Froovy());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Froovy extends StatelessWidget {
+  const Froovy({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Froovy',
       theme: ThemeData(
         // This is the theme of your application.
         //
