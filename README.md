@@ -1,6 +1,6 @@
 <img src="https://i.ibb.co.com/8brJmkn/Image-14-12-24-at-23-39.jpg" alt="Logo app" width="120" height="130">
 
-# Adel's Calendar
+# Froovy
 Brother & Adel's calendar UI/UX design homework given breath to life.
 
 ## Resources
