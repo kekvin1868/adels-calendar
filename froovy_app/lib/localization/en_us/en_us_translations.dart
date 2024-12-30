@@ -1,6 +1,7 @@
 final Map<String, String> enUs = {
   // Login Screen
   "lbl_sign_up": "Sign Up",
+  "lbl_froovy": "Froovy",
   
   // Login Screen"
   "lbl_hello_there": "Hello there!",

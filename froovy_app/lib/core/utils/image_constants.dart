@@ -1,5 +1,5 @@
 class ImageConstant {
-  static String imagePath = 'images';
+  static String imagePath = 'assets/images';
   
   static String imgSplashOrange = '$imagePath/splash_screen/orange.png'; 
 }

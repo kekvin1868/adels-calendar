@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../core/app_export.dart';
-import '../core/utils/pref_utils.dart';
 
 LightCodeColors get appTheme => ThemeHelper().themeColor();
 ThemeData get theme => ThemeHelper().themeData();
@@ -10,11 +9,11 @@ class ThemeHelper {
   var _appTheme = PrefUtils().getThemeData();
   
   // Map custom color themes & color schemes.
-  final Map<String, LightCodeColors> _supportedCustomColor = {
+  Map<String, LightCodeColors> _supportedCustomColor = {
     'lightCode': LightCodeColors()
   };
   
-  final Map<String, ColorScheme> _supportedColorScheme = {
+  Map<String, ColorScheme> _supportedColorScheme = {
     'lightCode': ColorSchemes.lightCodeColorScheme
   };
   

@@ -68,7 +68,7 @@ class SplashScreenState extends State<SplashScreen> {
           ),
           SizedBox(height: 26.h),
           Text(
-            "Yo.",
+            "lbl_peeling_good".tr,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,

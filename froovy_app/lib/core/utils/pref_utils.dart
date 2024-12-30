@@ -1,13 +1,13 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PrefUtils {
-  static SharedPreferences? _sharedPreferences;
-  
   PrefUtils() {
     SharedPreferences.getInstance().then((value) {
       _sharedPreferences = value;
     });
   }
+
+  static SharedPreferences? _sharedPreferences;
   
   Future<void> init() async {
     _sharedPreferences ??= await SharedPreferences.getInstance();
@@ -22,6 +22,10 @@ class PrefUtils {
   }
   
   String getThemeData() {
-    return _sharedPreferences!.getString('themeData') ?? 'primary';
+    try {
+      return _sharedPreferences!.getString('themeData')!;
+    } catch (e) {
+      return 'primary';
+    }
   }
 }
